@@ -1,14 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Hardwire Electric Blue</title>
+<title>Hardwire Electrical Services</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap">
 <style>
 /* Layout: dark-first trade site — full-bleed bands, 1180px content column, bento services grid, sticky glass header, mobile call bar */
 :root{
-  --bg:#0d0f12; --bg-2:#14171c; --bg-3:#1c2027; --line:rgba(255,255,255,.09); --line-2:rgba(255,255,255,.17);
-  --fg:#f2f4f7; --fg-2:#b3b9c4; --fg-3:#79808c;
-  --accent:#3b8cff; --accent-2:#1f6fe6; --on-accent:#ffffff;
+  --bg:#0a1220; --bg-2:#101a2b; --bg-3:#172338; --line:rgba(255,255,255,.09); --line-2:rgba(255,255,255,.17);
+  --fg:#f4f2ec; --fg-2:#b7bcc8; --fg-3:#7d8495;
+  --accent:#ff7a1a; --accent-2:#e2650a; --on-accent:#14080a;
   --ok:#4fd68c;
   --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
   --body:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -16,20 +15,9 @@
   --shadow:0 20px 60px rgba(0,0,0,.45);
   color-scheme:dark;
 }
-@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
-  --bg:#f3f5f8; --bg-2:#ffffff; --bg-3:#e8ecf2; --line:rgba(13,15,18,.09); --line-2:rgba(13,15,18,.17);
-  --fg:#0f1319; --fg-2:#49515e; --fg-3:#79808c;
-  --accent:#1f6fe6; --accent-2:#1557ba; --on-accent:#ffffff; --ok:#1d9a56;
-  --shadow:0 20px 60px rgba(13,15,18,.12); color-scheme:light;
-}}
-:root[data-theme="light"]{
-  --bg:#f3f5f8; --bg-2:#ffffff; --bg-3:#e8ecf2; --line:rgba(13,15,18,.09); --line-2:rgba(13,15,18,.17);
-  --fg:#0f1319; --fg-2:#49515e; --fg-3:#79808c;
-  --accent:#1f6fe6; --accent-2:#1557ba; --on-accent:#ffffff; --ok:#1d9a56;
-  --shadow:0 20px 60px rgba(13,15,18,.12); color-scheme:light;
-}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+:root[data-theme="light"]{color-scheme:dark}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
 img,svg{max-width:100%}
@@ -41,7 +29,8 @@ p{margin:0}
 .eyebrow::before{content:"";width:22px;height:2px;background:var(--accent);border-radius:2px}
 .h2{font-size:clamp(34px,5vw,56px);font-weight:800;margin-top:14px}
 .lead{color:var(--fg-2);font-size:clamp(17px,1.6vw,20px);max-width:60ch}
-section{padding-block:clamp(64px,9vw,120px)}
+section{padding-block:clamp(56px,9vw,120px)}
+@media (max-width:520px){.h2{font-size:32px}.lead{font-size:16px}}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 24px;border-radius:999px;font-weight:700;font-size:16px;border:1px solid transparent;cursor:pointer;transition:transform .18s ease,background .18s ease,border-color .18s ease;font-family:var(--body);white-space:nowrap}
 .btn:hover{transform:translateY(-2px)}
 .btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
@@ -51,30 +40,48 @@ section{padding-block:clamp(64px,9vw,120px)}
 .btn-ghost:hover{border-color:var(--fg)}
 .btn svg{width:18px;height:18px;flex:none}
 
+
+/* logo */
+.logo{display:inline-flex;align-items:center;gap:11px;color:var(--fg);line-height:1;flex:none}
+.logo .mark{width:40px;height:40px;color:var(--accent);flex:none}
+.logo .mark .mb{fill:var(--fg)}
+.logo .word{display:flex;flex-direction:column;gap:4px}
+.logo .w{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.02em;display:inline-flex;align-items:center;line-height:1}
+.logo .i{height:19px;width:11px;margin:0 1px 0 2px;fill:var(--accent)}
+.logo .sub{font-family:var(--body);font-weight:700;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-3);white-space:nowrap}
+footer .logo .mark{width:46px;height:46px}
+footer .logo .w{font-size:26px}
+footer .logo .i{height:22px;width:13px}
+
 /* header */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.01em;line-height:1}
-.brand .bolt{width:34px;height:34px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:var(--on-accent)}
-.brand .bolt svg{width:18px;height:18px}
-.brand small{display:block;font-family:var(--body);font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-3);margin-top:5px}
 nav.links{display:flex;gap:28px;font-weight:600;font-size:15px;color:var(--fg-2)}
 nav.links a:hover{color:var(--fg)}
 .top-cta{display:flex;align-items:center;gap:10px}
 .top .btn{padding:11px 18px;font-size:15px}
 .burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line-2);background:transparent;color:var(--fg);cursor:pointer;place-items:center}
 .burger svg{width:22px;height:22px}
-.mobile-nav{display:none;border-top:1px solid var(--line);background:var(--bg-2)}
-.mobile-nav a{display:block;padding:16px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:18px}
+.mobile-nav{display:none;border-top:1px solid var(--line);background:var(--bg-2);box-shadow:var(--shadow)}
 .mobile-nav.open{display:block}
-@media (max-width:880px){nav.links,.top-cta .btn-ghost{display:none}.burger{display:grid}}
+.top .mobile-nav .wrap{display:block;height:auto;padding-block:8px 20px}
+.mobile-nav a{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-weight:700;font-size:20px;color:var(--fg)}
+.mobile-nav a::after{content:"→";color:var(--accent);font-size:18px}
+.mobile-nav .mcta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.mobile-nav .mcta .btn{padding:14px 12px;font-size:15px}
+.mobile-nav .mcta .btn::after{content:none}
+.mobile-nav .hours{margin-top:14px;font-size:13px;color:var(--fg-3);text-align:center}
+.burger .x{display:none}.burger[aria-expanded="true"] .x{display:block}.burger[aria-expanded="true"] .ham{display:none}
+@media (max-width:880px){nav.links,.top-cta .btn-ghost{display:none}.burger{display:grid}.top .wrap{height:66px}}
+@media (max-width:560px){.top-cta .btn-primary{display:none}.top>.wrap{gap:10px}}
+@media (max-width:420px){.pill .hrs{display:none}}
 
 /* hero */
 .hero{position:relative;overflow:hidden;padding-block:clamp(56px,8vw,110px) clamp(40px,6vw,80px)}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 60% at 65% 30%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 65% 30%,#000 20%,transparent 75%);pointer-events:none}
 .hero-glow{position:absolute;width:640px;height:640px;right:-160px;top:-200px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 28%,transparent),transparent 65%);pointer-events:none;filter:blur(20px)}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;border-radius:999px;border:1px solid var(--line-2);background:color-mix(in srgb,var(--bg-2) 70%,transparent);font-size:13px;font-weight:600;color:var(--fg-2)}
+.pill{display:inline-flex;align-items:center;gap:8px;max-width:100%;flex-wrap:wrap;line-height:1.4;padding:8px 14px 8px 10px;border-radius:999px;border:1px solid var(--line-2);background:color-mix(in srgb,var(--bg-2) 70%,transparent);font-size:13px;font-weight:600;color:var(--fg-2)}
 .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 25%,transparent)}
 .hero h1{font-size:clamp(46px,7.4vw,96px);font-weight:800;margin-top:22px;line-height:.98}
 .hero h1 em{font-style:normal;color:var(--accent)}
@@ -99,7 +106,8 @@ nav.links a:hover{color:var(--fg)}
 .hero-card .tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:color-mix(in srgb,var(--ok) 18%,transparent);color:var(--ok)}
 .hero-card .cert{position:absolute;right:-14px;top:-14px;background:var(--accent);color:var(--on-accent);border-radius:14px;padding:10px 14px;font-family:var(--display);font-weight:800;font-size:13px;line-height:1.1;text-align:center;transform:rotate(4deg);box-shadow:0 10px 30px color-mix(in srgb,var(--accent) 40%,transparent)}
 .hero-card .cert small{display:block;font-family:var(--body);font-weight:700;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.75;margin-top:3px}
-@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}.hero-card{max-width:560px}}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr;gap:36px}.hero-card{max-width:560px}}
+@media (max-width:520px){.hero-card{padding:18px;margin-top:10px}.hero-card .cert{right:6px;top:-12px;font-size:12px;padding:8px 11px}.hero-card .row{font-size:13px;padding:11px 12px;flex-wrap:wrap}.hero-card .cu{gap:4px;padding:9px}.hero-card .mcb{height:50px}}
 
 /* marquee */
 .marquee{border-block:1px solid var(--line);background:var(--bg-2);overflow:hidden;padding-block:16px}
@@ -195,7 +203,9 @@ details p{color:var(--fg-2);padding-bottom:20px;font-size:15.5px}
 .contact-item .ic{width:44px;height:44px;border-radius:12px;background:color-mix(in srgb,var(--accent) 14%,transparent);display:grid;place-items:center;color:var(--accent);flex:none}
 .contact-item .ic svg{width:20px;height:20px}
 .contact-item small{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3)}
-.contact-item b{font-family:var(--display);font-size:18px;font-weight:700;word-break:break-word}
+.contact-item b{font-family:var(--display);font-size:18px;font-weight:700;overflow-wrap:anywhere}
+.contact-item>div:nth-child(2){min-width:0;flex:1}
+@media (max-width:520px){.contact-item .em{font-size:15px}}
 .copy{margin-left:auto;background:transparent;border:1px solid var(--line-2);color:var(--fg-2);border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--body);flex:none}
 .copy:hover{color:var(--fg);border-color:var(--fg)}
 form{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;box-shadow:var(--shadow);display:grid;gap:16px}
@@ -239,9 +249,9 @@ footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:56p
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Hardwire Electrical Services home">
-      <span class="bolt"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
-      <span>HARDWIRE<small>Electrical Services</small></span>
+    <a class="logo" href="#top" aria-label="Hardwire Electrical Services home">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="92 25" transform="rotate(-55 22 22)"/><path class="mb" d="M24.5 8 12.5 25.5h8l-1.5 10.5L31.5 18.5h-8z"/></svg>
+      <span class="word"><span class="w">HARDW<svg class="i" viewBox="0 0 12 22" aria-hidden="true"><path d="M8.2 0 0 12.5h4.6L3.4 22 12 9.5H7.3z"/></svg>RE</span><span class="sub">Electrical Services</span></span>
     </a>
     <nav class="links" aria-label="Main">
       <a href="#services">Services</a><a href="#why">Why us</a><a href="#process">How it works</a><a href="#areas">Areas</a><a href="#faq">FAQ</a>
@@ -249,12 +259,18 @@ footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:56p
     <div class="top-cta">
       <a class="btn btn-ghost" href="tel:07521620719"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>07521 620719</a>
       <a class="btn btn-primary" href="#quote">Get a free quote</a>
-      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><svg class="ham" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     </div>
   </div>
   <div class="mobile-nav" id="mnav">
     <div class="wrap">
-      <a href="#services">Services</a><a href="#why">Why us</a><a href="#process">How it works</a><a href="#areas">Areas we cover</a><a href="#faq">FAQ</a><a href="#quote">Get a free quote</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Hardwire</a>
+      <a href="#process">How it works</a>
+      <a href="#areas">Areas we cover</a>
+      <a href="#faq">FAQ</a>
+      <div class="mcta"><a class="btn btn-ghost" href="tel:07521620719">Call us</a><a class="btn btn-primary" href="#quote">Free quote</a></div>
+      <p class="hours">Mon–Fri 8am–5pm · 07521 620719</p>
     </div>
   </div>
 </header>
@@ -264,7 +280,7 @@ footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:56p
   <div class="hero-grid"></div><div class="hero-glow"></div>
   <div class="wrap">
     <div>
-      <span class="pill"><span class="dot"></span> Taking bookings for November · Mon–Fri 8am–5pm</span>
+      <span class="pill"><span class="dot"></span> Taking bookings for November<span class="hrs">&nbsp;· Mon–Fri 8am–5pm</span></span>
       <h1>Wired right.<br><em>First time.</em></h1>
       <p class="lead">NICEIC and NAPIT registered electricians for homes and businesses across Chesterfield, Sheffield, Derby, Nottingham and Rotherham. Fixed prices, tidy work, and every job tested and certified before we leave.</p>
       <div class="hero-cta">
@@ -410,7 +426,7 @@ footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:56p
       <p class="lead" style="margin-top:16px">Tell us what needs doing and we'll come back to you with a fixed price. Phone is quickest during working hours.</p>
       <div class="contact-list">
         <div class="contact-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg></div><div><small>Phone</small><b>07521 620719</b></div><button class="copy" data-copy="07521 620719">Copy</button></div>
-        <div class="contact-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg></div><div><small>Email</small><b>admin@hardwireelectrical.co.uk</b></div><button class="copy" data-copy="admin@hardwireelectrical.co.uk">Copy</button></div>
+        <div class="contact-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg></div><div><small>Email</small><b class="em">admin@<wbr>hardwireelectrical.co.uk</b></div><button class="copy" data-copy="admin@hardwireelectrical.co.uk">Copy</button></div>
         <div class="contact-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><small>Hours</small><b>Mon–Fri · 8am–5pm</b></div></div>
       </div>
     </div>
@@ -442,7 +458,10 @@ footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:56p
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <a class="brand" href="#top"><span class="bolt"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span><span>HARDWIRE<small>Electrical Services</small></span></a>
+        <a class="logo" href="#top">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="92 25" transform="rotate(-55 22 22)"/><path class="mb" d="M24.5 8 12.5 25.5h8l-1.5 10.5L31.5 18.5h-8z"/></svg>
+      <span class="word"><span class="w">HARDW<svg class="i" viewBox="0 0 12 22" aria-hidden="true"><path d="M8.2 0 0 12.5h4.6L3.4 22 12 9.5H7.3z"/></svg>RE</span><span class="sub">Electrical Services</span></span>
+    </a>
         <p>Electricians for homes and businesses across Chesterfield, Sheffield, Derby, Nottingham and Rotherham.</p>
         <div class="badges"><span class="badge">NICEIC</span><span class="badge">NAPIT</span><span class="badge">BS 7671</span></div>
       </div>
@@ -462,8 +481,8 @@ footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:56p
 <script>
 (function(){
   var burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
-  burger.addEventListener('click',function(){var o=mnav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
-  mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');burger.setAttribute('aria-expanded','false')})});
+  burger.addEventListener('click',function(){var o=mnav.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Close menu':'Open menu')});
+  mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Open menu')})});
 
   var chips=document.querySelectorAll('#chips .chip');
   chips.forEach(function(c){c.addEventListener('click',function(){c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true')})});
@@ -495,8 +514,7 @@ footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:56p
     els.forEach(function(el){if(el.getBoundingClientRect().top>innerHeight)el.classList.add('pre')});
     var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
     els.forEach(function(el){io.observe(el)});
+    setTimeout(function(){document.querySelectorAll('.rv.pre').forEach(function(el){if(el.getBoundingClientRect().top<innerHeight)el.classList.remove('pre')})},2500);
   }
 })();
 </script>
-
-</body></html>
