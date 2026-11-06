@@ -1,1 +1,502 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Hardwire Electric Blue</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: dark-first trade site — full-bleed bands, 1180px content column, bento services grid, sticky glass header, mobile call bar */
+:root{
+  --bg:#0d0f12; --bg-2:#14171c; --bg-3:#1c2027; --line:rgba(255,255,255,.09); --line-2:rgba(255,255,255,.17);
+  --fg:#f2f4f7; --fg-2:#b3b9c4; --fg-3:#79808c;
+  --accent:#3b8cff; --accent-2:#1f6fe6; --on-accent:#ffffff;
+  --ok:#4fd68c;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:16px; --r-lg:24px;
+  --shadow:0 20px 60px rgba(0,0,0,.45);
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#f3f5f8; --bg-2:#ffffff; --bg-3:#e8ecf2; --line:rgba(13,15,18,.09); --line-2:rgba(13,15,18,.17);
+  --fg:#0f1319; --fg-2:#49515e; --fg-3:#79808c;
+  --accent:#1f6fe6; --accent-2:#1557ba; --on-accent:#ffffff; --ok:#1d9a56;
+  --shadow:0 20px 60px rgba(13,15,18,.12); color-scheme:light;
+}}
+:root[data-theme="light"]{
+  --bg:#f3f5f8; --bg-2:#ffffff; --bg-3:#e8ecf2; --line:rgba(13,15,18,.09); --line-2:rgba(13,15,18,.17);
+  --fg:#0f1319; --fg-2:#49515e; --fg-3:#79808c;
+  --accent:#1f6fe6; --accent-2:#1557ba; --on-accent:#ffffff; --ok:#1d9a56;
+  --shadow:0 20px 60px rgba(13,15,18,.12); color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--accent);border-radius:2px}
+.h2{font-size:clamp(34px,5vw,56px);font-weight:800;margin-top:14px}
+.lead{color:var(--fg-2);font-size:clamp(17px,1.6vw,20px);max-width:60ch}
+section{padding-block:clamp(64px,9vw,120px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 24px;border-radius:999px;font-weight:700;font-size:16px;border:1px solid transparent;cursor:pointer;transition:transform .18s ease,background .18s ease,border-color .18s ease;font-family:var(--body);white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.btn-primary{background:var(--accent);color:var(--on-accent)}
+.btn-primary:hover{background:var(--accent-2)}
+.btn-ghost{background:transparent;color:var(--fg);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--fg)}
+.btn svg{width:18px;height:18px;flex:none}
 
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.01em;line-height:1}
+.brand .bolt{width:34px;height:34px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:var(--on-accent)}
+.brand .bolt svg{width:18px;height:18px}
+.brand small{display:block;font-family:var(--body);font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-3);margin-top:5px}
+nav.links{display:flex;gap:28px;font-weight:600;font-size:15px;color:var(--fg-2)}
+nav.links a:hover{color:var(--fg)}
+.top-cta{display:flex;align-items:center;gap:10px}
+.top .btn{padding:11px 18px;font-size:15px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line-2);background:transparent;color:var(--fg);cursor:pointer;place-items:center}
+.burger svg{width:22px;height:22px}
+.mobile-nav{display:none;border-top:1px solid var(--line);background:var(--bg-2)}
+.mobile-nav a{display:block;padding:16px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:18px}
+.mobile-nav.open{display:block}
+@media (max-width:880px){nav.links,.top-cta .btn-ghost{display:none}.burger{display:grid}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:clamp(56px,8vw,110px) clamp(40px,6vw,80px)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 60% at 65% 30%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 65% 30%,#000 20%,transparent 75%);pointer-events:none}
+.hero-glow{position:absolute;width:640px;height:640px;right:-160px;top:-200px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 28%,transparent),transparent 65%);pointer-events:none;filter:blur(20px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;border-radius:999px;border:1px solid var(--line-2);background:color-mix(in srgb,var(--bg-2) 70%,transparent);font-size:13px;font-weight:600;color:var(--fg-2)}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 25%,transparent)}
+.hero h1{font-size:clamp(46px,7.4vw,96px);font-weight:800;margin-top:22px;line-height:.98}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{margin-top:22px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;color:var(--fg-2);font-size:14px;font-weight:600}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.trust svg{width:18px;height:18px;color:var(--accent)}
+
+/* hero card */
+.hero-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow);position:relative}
+.hero-card .cu{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;background:var(--bg-3);padding:12px;border-radius:14px;border:1px solid var(--line)}
+.hero-card .mcb{height:58px;border-radius:6px;background:var(--bg-2);border:1px solid var(--line-2);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:6px;gap:5px;font-size:9px;font-weight:700;color:var(--fg-3);font-variant-numeric:tabular-nums}
+.hero-card .mcb i{width:12px;height:18px;border-radius:3px;background:var(--fg-3);opacity:.6}
+.hero-card .mcb.on i{background:var(--accent);opacity:1;box-shadow:0 0 10px color-mix(in srgb,var(--accent) 60%,transparent)}
+.hero-card .mcb.main{grid-column:span 2;background:var(--bg-2)}
+.hero-card .mcb.main i{width:28px;background:var(--ok);opacity:1}
+.hero-card .cu-label{grid-column:1/-1;display:flex;justify-content:space-between;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-3);padding:2px 2px 4px}
+.hero-card .rows{margin-top:18px;display:grid;gap:10px}
+.hero-card .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:12px;background:var(--bg-3);font-size:14px;font-weight:600}
+.hero-card .row b{font-family:var(--display);font-size:16px;font-weight:700}
+.hero-card .tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:color-mix(in srgb,var(--ok) 18%,transparent);color:var(--ok)}
+.hero-card .cert{position:absolute;right:-14px;top:-14px;background:var(--accent);color:var(--on-accent);border-radius:14px;padding:10px 14px;font-family:var(--display);font-weight:800;font-size:13px;line-height:1.1;text-align:center;transform:rotate(4deg);box-shadow:0 10px 30px color-mix(in srgb,var(--accent) 40%,transparent)}
+.hero-card .cert small{display:block;font-family:var(--body);font-weight:700;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.75;margin-top:3px}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}.hero-card{max-width:560px}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);background:var(--bg-2);overflow:hidden;padding-block:16px}
+.marquee .track{display:flex;gap:48px;width:max-content;animation:scroll 28s linear infinite;font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-2)}
+.marquee .track span{display:inline-flex;align-items:center;gap:48px}
+.marquee .track span::after{content:"";width:8px;height:8px;border-radius:2px;background:var(--accent);transform:rotate(45deg)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none;flex-wrap:wrap;width:auto}.btn:hover{transform:none}html{scroll-behavior:auto}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.stat{padding:24px;border-radius:var(--r);border:1px solid var(--line);background:var(--bg-2)}
+.stat b{display:block;font-family:var(--display);font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.stat b em{font-style:normal;color:var(--accent)}
+.stat span{display:block;margin-top:8px;color:var(--fg-2);font-size:14px;font-weight:600}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* services bento */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.card{position:relative;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;min-width:0;display:flex;flex-direction:column;gap:14px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.card .amp{font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.08em;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);padding:6px 10px;border-radius:8px;align-self:flex-start;font-variant-numeric:tabular-nums}
+.card h3{font-size:24px;font-weight:700}
+.card p{color:var(--fg-2);font-size:15.5px}
+.card .more{margin-top:auto;font-weight:700;font-size:14px;color:var(--fg);display:inline-flex;align-items:center;gap:6px}
+.card .more svg{width:16px;height:16px;transition:transform .2s}
+.card:hover .more svg{transform:translateX(4px)}
+.card.feature{grid-column:span 2;background:linear-gradient(135deg,var(--bg-2),var(--bg-3));overflow:hidden}
+.card.feature::after{content:"";position:absolute;right:-60px;bottom:-60px;width:260px;height:260px;border-radius:50%;border:40px solid color-mix(in srgb,var(--accent) 12%,transparent);pointer-events:none}
+.card.feature h3{font-size:clamp(28px,3vw,38px)}
+.card.feature p{max-width:48ch}
+.card ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.card ul li{font-size:13px;font-weight:600;padding:6px 11px;border-radius:999px;border:1px solid var(--line-2);color:var(--fg-2)}
+@media (max-width:900px){.bento{grid-template-columns:1fr 1fr}.card.feature{grid-column:span 2}}
+@media (max-width:600px){.bento{grid-template-columns:1fr}.card.feature{grid-column:span 1}}
+
+/* why */
+.why{background:var(--bg-2);border-block:1px solid var(--line)}
+.why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.why .sticky{position:sticky;top:100px}
+.points{display:grid;gap:14px}
+.point{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:22px;border-radius:var(--r);background:var(--bg);border:1px solid var(--line)}
+.point .ic{width:52px;height:52px;border-radius:14px;background:color-mix(in srgb,var(--accent) 14%,transparent);display:grid;place-items:center;color:var(--accent)}
+.point .ic svg{width:24px;height:24px}
+.point h3{font-size:20px;font-weight:700}
+.point p{color:var(--fg-2);font-size:15.5px;margin-top:6px}
+@media (max-width:900px){.why .wrap{grid-template-columns:1fr}.why .sticky{position:static}}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;counter-reset:step}
+.step{padding:28px;border-radius:var(--r-lg);border:1px solid var(--line);background:var(--bg-2);position:relative}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:var(--display);font-weight:800;font-size:56px;line-height:1;color:var(--accent);opacity:.9;letter-spacing:-.04em;display:block;margin-bottom:18px}
+.step h3{font-size:22px;font-weight:700}
+.step p{color:var(--fg-2);margin-top:8px;font-size:15.5px}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.review{padding:26px;border-radius:var(--r-lg);background:var(--bg-2);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.stars{color:var(--accent);letter-spacing:2px;font-size:15px}
+.review p{font-size:16px;line-height:1.55}
+.review .who{margin-top:auto;display:flex;align-items:center;gap:12px;font-size:14px;color:var(--fg-2);font-weight:600}
+.review .who i{width:38px;height:38px;border-radius:50%;background:var(--bg-3);border:1px solid var(--line-2);display:grid;place-items:center;font-style:normal;font-family:var(--display);font-weight:800;color:var(--fg)}
+.note{margin-top:14px;font-size:13px;color:var(--fg-3)}
+@media (max-width:860px){.reviews{grid-template-columns:1fr}}
+
+/* areas */
+.areas{background:var(--bg-2);border-block:1px solid var(--line)}
+.areas .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.city-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.city{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 18px;border-radius:14px;background:var(--bg);border:1px solid var(--line);font-weight:700;font-family:var(--display);font-size:18px;transition:border-color .2s}
+.city:hover{border-color:var(--accent)}
+.city small{font-family:var(--body);font-weight:600;font-size:12px;color:var(--fg-3)}
+.city.hq{grid-column:span 2;background:var(--accent);color:var(--on-accent);border-color:transparent}
+.city.hq small{color:var(--on-accent);opacity:.7}
+@media (max-width:900px){.areas .wrap{grid-template-columns:1fr}}
+@media (max-width:420px){.city-list{grid-template-columns:1fr}.city.hq{grid-column:span 1}}
+
+/* faq */
+.faq{max-width:780px;margin-top:40px;display:grid;gap:10px}
+details{border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2);padding:0 22px}
+summary{cursor:pointer;list-style:none;padding:20px 0;font-family:var(--display);font-weight:700;font-size:18px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;font-weight:500;color:var(--accent);transition:transform .2s;line-height:1}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--fg-2);padding-bottom:20px;font-size:15.5px}
+
+/* quote */
+.quote{position:relative;overflow:hidden}
+.quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.contact-list{display:grid;gap:12px;margin-top:28px}
+.contact-item{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;border:1px solid var(--line);background:var(--bg-2)}
+.contact-item .ic{width:44px;height:44px;border-radius:12px;background:color-mix(in srgb,var(--accent) 14%,transparent);display:grid;place-items:center;color:var(--accent);flex:none}
+.contact-item .ic svg{width:20px;height:20px}
+.contact-item small{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3)}
+.contact-item b{font-family:var(--display);font-size:18px;font-weight:700;word-break:break-word}
+.copy{margin-left:auto;background:transparent;border:1px solid var(--line-2);color:var(--fg-2);border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--body);flex:none}
+.copy:hover{color:var(--fg);border-color:var(--fg)}
+form{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;box-shadow:var(--shadow);display:grid;gap:16px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:7px;font-size:13px;font-weight:700;color:var(--fg-2)}
+input,select,textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--line-2);background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px}
+textarea{min-height:120px;resize:vertical}
+input::placeholder,textarea::placeholder{color:var(--fg-3)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{cursor:pointer;padding:9px 14px;border-radius:999px;border:1px solid var(--line-2);font-size:14px;font-weight:600;color:var(--fg-2);background:transparent;font-family:var(--body);transition:.15s}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.sent{display:none;padding:22px;border-radius:14px;background:color-mix(in srgb,var(--ok) 14%,transparent);border:1px solid color-mix(in srgb,var(--ok) 40%,transparent);font-weight:600}
+.sent b{font-family:var(--display);font-size:20px;display:block;margin-bottom:6px}
+@media (max-width:900px){.quote .wrap{grid-template-columns:1fr}}
+@media (max-width:520px){.f2{grid-template-columns:1fr}form{padding:22px}}
+
+/* footer */
+footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:56px 110px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.fgrid h4{font-family:var(--display);font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 14px;color:var(--fg-3)}
+.fgrid ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:15px;color:var(--fg-2)}
+.fgrid a:hover{color:var(--fg)}
+.fgrid p{color:var(--fg-2);font-size:15px;max-width:40ch;margin-top:14px}
+.badges{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.badge{padding:8px 12px;border-radius:10px;border:1px solid var(--line-2);font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.04em}
+.fbottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--fg-3)}
+@media (max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.fgrid{grid-template-columns:1fr}}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;gap:10px;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--line)}
+.callbar .btn{flex:1;padding:14px 16px}
+@media (max-width:880px){.callbar{display:flex}}
+@media (min-width:881px){footer{padding-bottom:56px}}
+
+/* reveal */
+.rv{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
+.rv.pre{opacity:.001;transform:translateY(18px)}
+@media (prefers-reduced-motion:reduce){.rv.pre{opacity:1;transform:none}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Hardwire Electrical Services home">
+      <span class="bolt"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
+      <span>HARDWIRE<small>Electrical Services</small></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a><a href="#why">Why us</a><a href="#process">How it works</a><a href="#areas">Areas</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="top-cta">
+      <a class="btn btn-ghost" href="tel:07521620719"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>07521 620719</a>
+      <a class="btn btn-primary" href="#quote">Get a free quote</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mnav">
+    <div class="wrap">
+      <a href="#services">Services</a><a href="#why">Why us</a><a href="#process">How it works</a><a href="#areas">Areas we cover</a><a href="#faq">FAQ</a><a href="#quote">Get a free quote</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-grid"></div><div class="hero-glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="pill"><span class="dot"></span> Taking bookings for November · Mon–Fri 8am–5pm</span>
+      <h1>Wired right.<br><em>First time.</em></h1>
+      <p class="lead">NICEIC and NAPIT registered electricians for homes and businesses across Chesterfield, Sheffield, Derby, Nottingham and Rotherham. Fixed prices, tidy work, and every job tested and certified before we leave.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#quote">Get a free quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="tel:07521620719">Call 07521 620719</a>
+      </div>
+      <div class="trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Fixed price before work starts</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>On time, as agreed</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Dust sheets down, mess cleared</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tested and certified</span>
+      </div>
+    </div>
+    <div class="hero-card" aria-label="Illustration of a modern consumer unit and certificate">
+      <div class="cert">BS 7671<small>18th Edition</small></div>
+      <div class="cu" id="cu">
+        <div class="cu-label"><span>Consumer unit</span><span>RCBO · SPD</span></div>
+        <div class="mcb main"><i></i>100A</div>
+        <div class="mcb on"><i></i>32A</div><div class="mcb on"><i></i>32A</div><div class="mcb on"><i></i>40A</div>
+        <div class="mcb on"><i></i>16A</div><div class="mcb on"><i></i>6A</div><div class="mcb on"><i></i>6A</div>
+      </div>
+      <div class="rows">
+        <div class="row"><span>Fuse board upgrade</span><b>Tested</b><span class="tag">Certified</span></div>
+        <div class="row"><span>EICR · 3-bed semi</span><b>Satisfactory</b><span class="tag">Issued</span></div>
+        <div class="row"><span>EV charger · 7.4kW</span><b>Commissioned</b><span class="tag">Live</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Chesterfield</span><span>Sheffield</span><span>Derby</span><span>Nottingham</span><span>Rotherham</span><span>NICEIC registered</span><span>NAPIT registered</span><span>Free quotes</span>
+  <span>Chesterfield</span><span>Sheffield</span><span>Derby</span><span>Nottingham</span><span>Rotherham</span><span>NICEIC registered</span><span>NAPIT registered</span><span>Free quotes</span>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">What we do</span>
+    <h2 class="h2">From a single socket<br>to a full rewire.</h2>
+    <p class="lead" style="margin-top:16px">If it runs on electricity, we can help. Every job is priced up front, tested on completion and handed over with the right certificate.</p>
+    <div class="bento">
+      <article class="card feature rv">
+        <span class="amp">100A · MAIN</span>
+        <h3>Fuse board upgrades</h3>
+        <p>Old fuse boxes swapped for modern consumer units with RCBO protection on every circuit and surge protection built in. Usually done in a day, with minimal disruption and an Electrical Installation Certificate on completion.</p>
+        <ul><li>RCBO per circuit</li><li>Surge protection</li><li>Same-day install</li><li>EIC issued</li></ul>
+        <a class="more" href="#quote">Price my upgrade <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </article>
+      <article class="card rv"><span class="amp">40A</span><h3>EV charger installs</h3><p>Home charge points fitted safely and commissioned properly, with honest advice on the right charger for your car and your tariff.</p><a class="more" href="#quote">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></article>
+      <article class="card rv"><span class="amp">32A</span><h3>Full and part rewires</h3><p>Safe, modern wiring for older homes, planned around you to keep the disruption down and the finish neat.</p><a class="more" href="#quote">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></article>
+      <article class="card rv"><span class="amp">TEST</span><h3>EICRs and safety checks</h3><p>Electrical Installation Condition Reports for landlords, buyers and homeowners. Clear findings, no scare tactics.</p><a class="more" href="#quote">Book an EICR <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></article>
+      <article class="card rv"><span class="amp">6A</span><h3>Lighting</h3><p>Downlights, pendants, dimmers, outdoor and garden lighting, all fitted neatly with cables hidden where they should be.</p><a class="more" href="#quote">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></article>
+      <article class="card rv"><span class="amp">32A</span><h3>Sockets and switches</h3><p>Extra sockets, USB-C points and new switches wherever you need them, including kitchens, garages and home offices.</p><a class="more" href="#quote">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></article>
+      <article class="card rv"><span class="amp">3Φ</span><h3>Commercial and industrial</h3><p>New-build business premises, extensions and refits for main contractors. Three-phase supplies, distribution boards and full testing to BS 7671.</p><a class="more" href="#quote">Talk to us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></article>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sticky">
+      <span class="eyebrow">Why Hardwire</span>
+      <h2 class="h2">No surprises.<br>No shortcuts.</h2>
+      <p class="lead" style="margin-top:16px">A local firm that turns up when it says it will, tells you straight what needs doing, and leaves the place tidier than it found it.</p>
+      <div class="stats" style="grid-template-columns:1fr 1fr;margin-top:32px">
+        <div class="stat"><b>100<em>%</em></b><span>of work tested and certified</span></div>
+        <div class="stat"><b>5</b><span>cities covered from Chesterfield</span></div>
+        <div class="stat"><b>0</b><span>hidden extras on the invoice</span></div>
+        <div class="stat"><b>18<em>th</em></b><span>Edition BS 7671 compliant</span></div>
+      </div>
+    </div>
+    <div class="points">
+      <div class="point rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 10h18M7 15h2m4 0h4M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg></div><div><h3>Straight-talking quotes</h3><p>We tell you what needs doing, what doesn't, and the price, before any work starts. The price you're quoted is the price you pay.</p></div></div>
+      <div class="point rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4m5.6 2a9.6 9.6 0 1 1-19.2 0 9.6 9.6 0 0 1 19.2 0z"/></svg></div><div><h3>Work done properly</h3><p>Every circuit tested, every job certified. Neat cable runs, labelled boards and nothing left loose or unfinished.</p></div></div>
+      <div class="point rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6 7-12a7 7 0 1 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><h3>Local and easy to reach</h3><p>Based in Chesterfield, so we're never far away when you need us. One number, one person answering it.</p></div></div>
+      <div class="point rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/></svg></div><div><h3>Registered and insured</h3><p>NICEIC and NAPIT registered, with full public liability insurance. Your certificates are logged with the scheme, not just handed over.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2 class="h2">Three steps. That's it.</h2>
+    <div class="steps">
+      <div class="step rv"><h3>Get in touch</h3><p>Call, or send a few details through the form below. A photo of the fuse board or the job helps us price faster.</p></div>
+      <div class="step rv"><h3>Get a clear price</h3><p>We look at what's needed, explain the options, and give you a fixed written quote. No pressure, no call-out fee for quoting.</p></div>
+      <div class="step rv"><h3>Job done, tested</h3><p>We do the work on the agreed date, test everything, tidy up and hand over the paperwork before we leave.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Customer reviews</span>
+    <h2 class="h2">What people say.</h2>
+    <div class="reviews">
+      <div class="review rv"><div class="stars" aria-label="5 out of 5">★★★★★</div><p>"Example review. Replace with a real customer quote from Google or Checkatrade before going live."</p><div class="who"><i>A</i><span>Customer name<br><span style="color:var(--fg-3)">Fuse board upgrade · Sheffield</span></span></div></div>
+      <div class="review rv"><div class="stars" aria-label="5 out of 5">★★★★★</div><p>"Example review. Replace with a real customer quote from Google or Checkatrade before going live."</p><div class="who"><i>B</i><span>Customer name<br><span style="color:var(--fg-3)">EV charger · Chesterfield</span></span></div></div>
+      <div class="review rv"><div class="stars" aria-label="5 out of 5">★★★★★</div><p>"Example review. Replace with a real customer quote from Google or Checkatrade before going live."</p><div class="who"><i>C</i><span>Customer name<br><span style="color:var(--fg-3)">EICR · Derby</span></span></div></div>
+    </div>
+    <p class="note">Placeholder cards. Drop in genuine reviews and link the section to your Google Business profile.</p>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Areas we cover</span>
+      <h2 class="h2">Five cities.<br>One team.</h2>
+      <p class="lead" style="margin-top:16px">Based in Chesterfield and working across South Yorkshire and the East Midlands. If you're in between, give us a call and we'll let you know.</p>
+      <div class="hero-cta"><a class="btn btn-primary" href="#quote">Check we cover you</a></div>
+    </div>
+    <div class="city-list">
+      <a class="city hq" href="#quote">Chesterfield <small>HQ · S40–S45</small></a>
+      <a class="city" href="#quote">Sheffield <small>S1–S36</small></a>
+      <a class="city" href="#quote">Rotherham <small>S60–S66</small></a>
+      <a class="city" href="#quote">Derby <small>DE1–DE24</small></a>
+      <a class="city" href="#quote">Nottingham <small>NG1–NG17</small></a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <span class="eyebrow">Good to know</span>
+    <h2 class="h2">Questions we get asked.</h2>
+    <div class="faq">
+      <details><summary>Do you charge for a quote?</summary><p>No. Quotes are free and written, and there's no call-out fee for coming to look at a job.</p></details>
+      <details><summary>How long does a fuse board upgrade take?</summary><p>Most domestic consumer unit changes are done in a single day. Power is off for a few hours while we swap the board and test every circuit.</p></details>
+      <details><summary>Do landlords need an EICR?</summary><p>Yes. Private landlords in England must have a valid EICR for every tenancy, renewed at least every five years, and provide a copy to tenants and to the council on request.</p></details>
+      <details><summary>Are you registered and insured?</summary><p>We're registered with NICEIC and NAPIT, which means our work is assessed and the certificates we issue are recognised by councils, mortgage lenders and insurers. We carry full public liability cover.</p></details>
+      <details><summary>Can you work with my builder or main contractor?</summary><p>Yes. A large part of our work is on commercial new-builds, extensions and refits alongside main contractors, following site RAMS and the contractor's programme.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Get a free quote</span>
+      <h2 class="h2">Need an electrician?</h2>
+      <p class="lead" style="margin-top:16px">Tell us what needs doing and we'll come back to you with a fixed price. Phone is quickest during working hours.</p>
+      <div class="contact-list">
+        <div class="contact-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg></div><div><small>Phone</small><b>07521 620719</b></div><button class="copy" data-copy="07521 620719">Copy</button></div>
+        <div class="contact-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg></div><div><small>Email</small><b>admin@hardwireelectrical.co.uk</b></div><button class="copy" data-copy="admin@hardwireelectrical.co.uk">Copy</button></div>
+        <div class="contact-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><small>Hours</small><b>Mon–Fri · 8am–5pm</b></div></div>
+      </div>
+    </div>
+    <form id="qform" novalidate>
+      <div class="f2">
+        <label>Your name<input id="q-name" name="name" placeholder="Jane Smith" required autocomplete="name"></label>
+        <label>Phone<input id="q-phone" name="phone" type="tel" placeholder="07..." required autocomplete="tel"></label>
+      </div>
+      <div class="f2">
+        <label>Email (optional)<input id="q-email" name="email" type="email" placeholder="you@example.com" autocomplete="email"></label>
+        <label>Postcode<input id="q-postcode" name="postcode" placeholder="S40 1AB" autocomplete="postal-code"></label>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--fg-2);margin-bottom:8px">What's the job?</div>
+        <div class="chips" id="chips" role="group" aria-label="Job type">
+          <button type="button" class="chip" aria-pressed="false">Fuse board</button><button type="button" class="chip" aria-pressed="false">Rewire</button><button type="button" class="chip" aria-pressed="false">EICR</button><button type="button" class="chip" aria-pressed="false">EV charger</button><button type="button" class="chip" aria-pressed="false">Lighting</button><button type="button" class="chip" aria-pressed="false">Sockets</button><button type="button" class="chip" aria-pressed="false">Commercial</button><button type="button" class="chip" aria-pressed="false">Something else</button>
+        </div>
+      </div>
+      <label>Tell us a bit more<textarea id="q-msg" name="message" placeholder="e.g. 1960s semi, old wylex fuse box, would like it upgraded before Christmas"></textarea></label>
+      <button class="btn btn-primary" type="submit" id="q-submit">Send my request</button>
+      <p style="font-size:13px;color:var(--fg-3)">We'll only use your details to reply about this job.</p>
+      <div class="sent" id="sent" role="status"><b>Thanks, we've got it.</b>We'll call or email you with a price, usually the same working day.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="#top"><span class="bolt"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span><span>HARDWIRE<small>Electrical Services</small></span></a>
+        <p>Electricians for homes and businesses across Chesterfield, Sheffield, Derby, Nottingham and Rotherham.</p>
+        <div class="badges"><span class="badge">NICEIC</span><span class="badge">NAPIT</span><span class="badge">BS 7671</span></div>
+      </div>
+      <div><h4>Services</h4><ul><li><a href="#services">Fuse board upgrades</a></li><li><a href="#services">Full and part rewires</a></li><li><a href="#services">EICRs and safety checks</a></li><li><a href="#services">Lighting</a></li><li><a href="#services">Sockets and switches</a></li><li><a href="#services">EV charger installs</a></li></ul></div>
+      <div><h4>Areas</h4><ul><li><a href="#areas">Electrician in Chesterfield</a></li><li><a href="#areas">Electrician in Sheffield</a></li><li><a href="#areas">Electrician in Derby</a></li><li><a href="#areas">Electrician in Nottingham</a></li><li><a href="#areas">Electrician in Rotherham</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>07521 620719</li><li>admin@hardwireelectrical.co.uk</li><li>Monday to Friday, 8am – 5pm</li><li>Chesterfield, Derbyshire</li></ul></div>
+    </div>
+    <div class="fbottom"><span>© 2026 Hardwire Electrical Services Ltd · Company no. 14871308</span><span>Registered in England and Wales</span></div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-ghost" href="tel:07521620719">Call now</a>
+  <a class="btn btn-primary" href="#quote">Free quote</a>
+</div>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
+  burger.addEventListener('click',function(){var o=mnav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');burger.setAttribute('aria-expanded','false')})});
+
+  var chips=document.querySelectorAll('#chips .chip');
+  chips.forEach(function(c){c.addEventListener('click',function(){c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true')})});
+
+  document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+    var t=b.getAttribute('data-copy'),done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};
+    try{navigator.clipboard.writeText(t).then(done).catch(function(){fallback()})}catch(e){fallback()}
+    function fallback(){var el=b.parentElement.querySelector('b');var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);done()}
+  })});
+
+  var form=document.getElementById('qform');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('q-name'),phone=document.getElementById('q-phone'),ok=true;
+    [name,phone].forEach(function(i){if(!i.value.trim()){i.style.borderColor='#e5484d';ok=false}else{i.style.borderColor=''}});
+    if(!ok){(name.value.trim()?phone:name).focus();return}
+    document.getElementById('q-submit').disabled=true;
+    document.getElementById('sent').style.display='block';
+    document.getElementById('sent').scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+
+  // flicker the MCB lights gently
+  var mcbs=document.querySelectorAll('#cu .mcb:not(.main)');
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){setInterval(function(){var m=mcbs[Math.floor(Math.random()*mcbs.length)];m.classList.remove('on');setTimeout(function(){m.classList.add('on')},180)},2600)}
+
+  // reveal on scroll from a visible resting state
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var els=document.querySelectorAll('.rv');
+    els.forEach(function(el){if(el.getBoundingClientRect().top>innerHeight)el.classList.add('pre')});
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }
+})();
+</script>
+
+</body></html>
